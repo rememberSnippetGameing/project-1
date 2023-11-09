@@ -1,0 +1,62 @@
+myFunction();
+function myFunction() {
+  penColor("blue");
+  dot(500);
+  penColor("red");
+  penWidth(100);
+  moveTo(0, 239);
+  turnRight(90);
+  moveForward(320);
+  turnLeft(90);
+  moveForward(50);
+  penColor("red");
+  turnLeft(90);
+  penColor("white");
+  moveForward(320);
+  turnRight(90);
+  moveForward(50);
+  penColor("red");
+  turnRight(90);
+  moveForward(320);
+  turnLeft(90);
+  moveForward(50);
+  penWidth(50);
+  penColor("white");
+  turnLeft(90);
+  moveForward(320);
+  penUp();
+  star();
+}
+function star() {
+  moveTo(10, 465);
+  for (var b = 0; b < 4; b++) {
+    for (var i = 0; i < 6; i++) {
+      turnRight(90);
+      moveForward(20);
+      drawStar(15);
+    }
+    for (var a = 0; a < 5; a++) {
+      moveForward(25);
+      drawStar(15);
+      turnLeft(90);
+    }
+  }
+  for (var s = 0; s < 6; s++) {
+    turnRight(90);
+    moveForward(20);
+    drawStar(15);
+  }
+}
+function drawStar(size){
+penRGB(255,255,255);
+penWidth(5);
+penDown();
+turnTo(0);
+
+for (var i = 0; i < 5; i++) {
+  moveForward(size);
+  turnRight(144);
+}
+
+penUp();
+}
